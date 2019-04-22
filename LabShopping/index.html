@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping</title>
+  </head>
+  <body>
+    <h1>SHOPPING</h1>
+    <p class="desc">SHIRT</p>
+    <img class="image" src="shirt.png" alt="shirt"><br>
+    <input type="button" name="shirtDec" value="-" onclick="shirtDec()">
+    <p id="demo1">0</p>
+    <input type="button" name="shirtInc" value="+" onclick="shirtInc()">
+    <p class="desc">JEANS</p>
+    <img class="image" src="jeans.png" alt="jeans"><br>
+    <input type="button" name="jeansDec" value="-" onclick="jeansDec()">
+    <p id="demo2">0</p>
+    <input type="button" name="jeansInc" value="+" onclick="jeansInc()"><br>
+    <input type="button" name="submit" value="SUBMIT" onclick="submit()">
+    <script type="text/javascript">
+      var shirt = 0, jeans = 0;
+      function shirtDec(){
+        if(shirt <= 0){
+          alert("error");
+        }else{
+          shirt--;
+          document.getElementById("demo1").innerHTML = shirt;
+        }
+      }
+      function shirtInc(){
+        shirt++;
+        document.getElementById("demo1").innerHTML = shirt;
+      }
+      function jeansDec(){
+        if(jeans <= 0){
+          alert("error");
+        }else{
+          jeans--;
+          document.getElementById("demo2").innerHTML = jeans;
+        }
+      }
+      function jeansInc(){
+        jeans++;
+        document.getElementById("demo2").innerHTML = jeans;
+      }
+      function submit(){
+        alert("price is : "+((shirt*200)+(jeans*400)));
+      }
+    </script>
+  </body>
+</html>
